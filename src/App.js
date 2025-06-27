@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Contact from './contact';
 
 import './App.css';
 
@@ -23,7 +23,7 @@ const Portfolio = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="hero">
+      {/* <section className="hero">
         <h1>Siddharth Pagare</h1>
         <h2>Software Developer | Full Stack Enthusiast</h2>
         <p>Crafting elegant solutions for complex problems with a passion for clean code</p>
@@ -31,7 +31,18 @@ const Portfolio = () => {
           <button className="btn primary">Download Resume</button>
           <button  className="btn secondary"><a href="#projects">View Projects</a></button>
         </div>
+      </section> */}
+
+      <section className="hero">
+        <h1>Siddharth Pagare</h1>
+        <h2>Software Developer | Full Stack Enthusiast</h2>
+        <p>Crafting elegant solutions for complex problems with a passion for clean code</p>
+          <div className="hero-buttons">
+            <a href="/resume.pdf" download className="btn primary">Download Resume</a>
+            <a href="#projects" className="btn secondary">View Projects</a>
+          </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="about">
@@ -43,12 +54,12 @@ const Portfolio = () => {
 
           </div>
           <div className="about-text">
-            <p>I’m Siddharth Pagare, a Computer Science student passionate about building impactful tech solutions. With hands-on experience in Java, MySQL, and OAuth integrations, I’ve developed projects ranging from e-commerce platforms to sign language interfaces. I'm driven by curiosity, efficient problem-solving, and continuous learning. I thrive in collaborative environments and enjoy turning innovative ideas into functional, user-friendly applications.</p>
+            <p>I’m Siddharth Pagare, a Computer Science student passionate about building impactful tech solutions. With hands-on experience in Java, MySQL, and Python , I’ve developed projects ranging from e-commerce platforms to sign language interfaces. I'm driven by curiosity, efficient problem-solving, and continuous learning. I thrive in collaborative environments and enjoy turning innovative ideas into functional, user-friendly applications.</p>
             <div className="tech-tags">
               <span className="tag">Java</span>
               <span className="tag">JDBC</span>
-              <span className="tag">Springboot</span>
               <span className="tag">Python</span>
+              <span className="tag">FastAPI</span>
               <span className="tag">MySQL</span>
               
             </div>
@@ -123,7 +134,7 @@ const Portfolio = () => {
                 <div className="skill-icon database"></div>
                 <span>Database</span>
               </div>
-            </div>
+              </div>
           </div>
           <div className="skill-category">
             <h3>Soft Skills</h3>
@@ -144,6 +155,28 @@ const Portfolio = () => {
                 <div className="skill-icon database"></div>
                 <span> Active Listening</span>
               </div>
+            </div>
+          </div>
+          <div className="skill-category">
+            <h3>AI Tools</h3>
+            <div className="skill-items">
+              <div className="skill-item">
+                <div className="skill-icon git"></div>
+                <span>Motiff.ai</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-icon database"></div>
+                <span> v0dev.ai</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-icon database"></div>
+                <span> ChatGPT</span>
+              </div>
+              <div className="skill-item">
+                <div className="skill-icon database"></div>
+                <span> Claude AI</span>
+              </div>
+             
             </div>
           </div>
         </div>
@@ -239,7 +272,7 @@ const Portfolio = () => {
               <a href="https://github.com/arorasimran624/Techno_clubs_portal" className="project-link github">GitHub</a>
             </div>
           </div>
-          <div className="project-card">
+          {/* <div className="project-card">
             <div className="project-image">
               <img src="/Vision_Bot.png" alt="E-commerce Platform" />
             </div>
@@ -255,7 +288,7 @@ const Portfolio = () => {
               <a href="#" className="project-link live">Live Demo</a>
               <a href="https://github.com/Siddharthp23/vision_bot.ai" className="project-link github">GitHub</a>
             </div>
-          </div>
+          </div> */}
           
 
         </div>
@@ -301,8 +334,8 @@ const Portfolio = () => {
               <p className="university">Medicaps University • 2022 - 2026</p>
             </div>
             <div className="education-details">
-              <span className="gpa">CGPA: 8.56</span>
-              <p>Focus in Artificial Intelligence</p>
+              <span className="gpa">CGPA: 8.61</span>
+              <p>Focus in Computer Science</p>
             </div>
           </div>
         </div>
@@ -339,6 +372,15 @@ const Portfolio = () => {
       <section id="certificates" className="certificates">
         <h2 className="section-title">Certificates & Achievements</h2>
         <div className="certificates-container">
+          
+          <div className="certificate-card">
+            <div className="certificate-image">
+              <img src="/Deloitte_certificate.png" alt="Deloitte_certificate" />
+            </div>
+            <h3>Data Analytics in Job Simulation</h3>
+            <p>issued by Deloitte (Forge)</p>
+          </div>
+          
           <div className="certificate-card">
             <div className="certificate-image">
               <img src="/LIDAR_Certificate.png" alt="LIDAR Certificate" />
@@ -398,7 +440,40 @@ const Portfolio = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="contact">
+      {/* <section id="contact" className="contact">
+        <h2 className="section-title">Get In Touch</h2>
+        <div className="contact-container">
+          <form className="contact-form">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" className="btn primary">Send Message</button>
+          </form>
+
+          <div className="connect">
+            <h3>Connect With Me</h3>
+            <p>Feel free to reach out for collaborations or just a friendly hello</p>
+            <div className="social-links">
+              <a href="https://github.com/Siddharthp23" className="social-link github"></a>
+              <a href="https://www.linkedin.com/in/siddharth-pagare-061a57281" className="social-link linkedin" target="_blank" rel="noopener noreferrer"></a>
+
+              <a href="#" className="social-link email"></a>
+            </div>
+          </div>
+        </div>
+      </section> */}
+      <div className="App">
+        {/* Other sections */}
+        <section id="contact" className="contact">
         <h2 className="section-title">Get In Touch</h2>
         <div className="contact-container">
           <form className="contact-form">
@@ -429,6 +504,10 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+        <contact />
+      </div>
+
+
 
       {/* Footer */}
       <footer className="footer">
